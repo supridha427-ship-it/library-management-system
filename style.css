@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #263238;
+  background: #f4f7f5;
+}
+
+.header {
+  padding: 32px 20px;
+  text-align: center;
+  color: white;
+  background: #176b52;
+}
+
+.header h1 {
+  margin: 0 0 8px;
+}
+
+.header p {
+  margin: 0;
+}
+
+.container {
+  width: min(1000px, 90%);
+  margin: 32px auto;
+}
+
+.welcome,
+.card,
+.book {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgb(0 0 0 / 8%);
+}
+
+.welcome {
+  margin-bottom: 24px;
+}
+
+.welcome h2,
+.books h2 {
+  color: #176b52;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.card h3 {
+  margin: 0;
+  color: #52615b;
+}
+
+.number {
+  margin: 12px 0 0;
+  color: #176b52;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.book h3 {
+  margin-top: 0;
+}
+
+.book p {
+  color: #66736d;
+}
+
+.status {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.available {
+  color: #176b52;
+  background: #e2f4eb;
+}
+
+.issued {
+  color: #9b5a00;
+  background: #fff0d6;
+}
+
+.footer {
+  padding: 18px;
+  text-align: center;
+  color: white;
+  background: #263238;
+}
+
+@media (max-width: 650px) {
+  .summary,
+  .book-list {
+    grid-template-columns: 1fr;
+  }
+}
