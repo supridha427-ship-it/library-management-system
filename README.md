@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Library Management System
+=======
+# library-management-system
+>>>>>>> e5af2b4ad0a7af610bec887db6c9d27382036fea
 
 ## Introduction
 
@@ -38,4 +42,8 @@ The Library Management System is a web-based application used to manage books, m
 - Mobile application
 - Cloud database
 - Book reservation system
+<<<<<<< HEAD
 - Automatic overdue notifications
+=======
+- Automatic overdue notifications
+>>>>>>> e5af2b4ad0a7af610bec887db6c9d27382036fea
