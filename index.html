@@ -1,64 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173f35">
   <title>Library Management System</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="header">
-    <h1>📚 Library Management System</h1>
-    <p>Manage books and library members in one place</p>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Library home"><span class="brand-icon">L</span><span>Leaf &amp; Lore</span></a>
+    <nav class="nav" aria-label="Main navigation">
+      <button class="nav-link active" data-slide="home">Home</button>
+      <button class="nav-link" data-slide="books">Books</button>
+      <button class="nav-link" data-slide="contact">Contact</button>
+    </nav>
+    <span class="top-note">Your little corner of stories</span>
   </header>
 
-  <main class="container">
-    <section class="welcome">
-      <h2>Welcome to the Library</h2>
-      <p>Browse the collection and keep track of books available to borrow.</p>
-    </section>
-
-    <section class="summary" aria-label="Library summary">
-      <article class="card">
-        <h3>Total Books</h3>
-        <p class="number">250</p>
-      </article>
-      <article class="card">
-        <h3>Books Issued</h3>
-        <p class="number">48</p>
-      </article>
-      <article class="card">
-        <h3>Members</h3>
-        <p class="number">120</p>
-      </article>
-    </section>
-
-    <section class="books">
-      <h2>Featured Books</h2>
-      <div class="book-list">
-        <article class="book">
-          <h3>The Hobbit</h3>
-          <p>J. R. R. Tolkien</p>
-          <span class="status available">Available</span>
-        </article>
-
-        <article class="book">
-          <h3>Little Women</h3>
-          <p>Louisa May Alcott</p>
-          <span class="status issued">Issued</span>
-        </article>
-
-        <article class="book">
-          <h3>Animal Farm</h3>
-          <p>George Orwell</p>
-          <span class="status available">Available</span>
-        </article>
+  <main>
+    <section class="slide home active" id="home" aria-labelledby="home-title">
+      <div class="home-copy">
+        <p class="eyebrow">WELCOME TO YOUR COMMUNITY LIBRARY</p>
+        <h1 id="home-title">A good book<br>takes you <em>everywhere.</em></h1>
+        <p class="intro">Find your next favorite, discover new ideas, and make a little time for reading.</p>
+        <button class="primary-button" data-go="books">Explore the collection <span aria-hidden="true">→</span></button>
+        <div class="home-stat"><strong>250+</strong><span>stories waiting on our shelves</span></div>
       </div>
+      <div class="book-art" aria-label="Illustration of a stack of books" role="img">
+        <div class="sun"></div><div class="plant">✳</div>
+        <div class="book-stack"><div class="book-cover cover-one"><span>THE ART<br>OF SLOW</span></div><div class="book-cover cover-two"><span>WILD<br>PLACES</span></div><div class="book-cover cover-three"><span>GROW<br>WITHIN</span></div></div>
+        <div class="art-caption">TURN THE PAGE. FIND YOUR PLACE.</div>
+      </div>
+      <div class="slide-count"><span>01</span> / 03</div>
+    </section>
+
+    <section class="slide books-slide" id="books" aria-labelledby="books-title" hidden>
+      <div class="section-heading"><p class="eyebrow">SOMETHING FOR EVERY MOOD</p><h2 id="books-title">Explore the <em>shelves.</em></h2><p>Pick a title and see if it’s ready to borrow.</p></div>
+      <div class="book-grid">
+        <article class="catalog-card"><div class="cover catalog-cover green"><span>THE<br>SECRET<br>GARDEN</span><small>F. H. BURNETT</small></div><div class="catalog-info"><p class="genre">CLASSIC · FICTION</p><h3>The Secret Garden</h3><p>Frances Hodgson Burnett</p><span class="availability"><i></i> Available</span></div></article>
+        <article class="catalog-card"><div class="cover catalog-cover orange"><span>THE<br>WILD<br>ROBOT</span><small>PETER BROWN</small></div><div class="catalog-info"><p class="genre">ADVENTURE · FICTION</p><h3>The Wild Robot</h3><p>Peter Brown</p><span class="availability"><i></i> Available</span></div></article>
+        <article class="catalog-card"><div class="cover catalog-cover blue"><span>ATLAS<br>OF<br>WONDERS</span><small>J. N. RIVERS</small></div><div class="catalog-info"><p class="genre">TRAVEL · NONFICTION</p><h3>Atlas of Wonders</h3><p>J. N. Rivers</p><span class="availability unavailable"><i></i> Currently borrowed</span></div></article>
+      </div>
+      <div class="slide-count"><span>02</span> / 03</div>
+    </section>
+
+    <section class="slide contact-slide" id="contact" aria-labelledby="contact-title" hidden>
+      <div class="contact-mark" aria-hidden="true">✳</div>
+      <div class="contact-copy"><p class="eyebrow">WE’D LOVE TO SEE YOU</p><h2 id="contact-title">Make yourself<br><em>at home.</em></h2><p>Stop by, browse a while, and let us help you find your next great read.</p>
+        <div class="contact-details"><div><span class="detail-icon">⌖</span><p><strong>Visit us</strong><br>12 Reading Lane<br>Your Town</p></div><div><span class="detail-icon">◷</span><p><strong>Library hours</strong><br>Monday–Saturday<br>9:00 am–6:00 pm</p></div></div>
+        <a class="email-link" href="mailto:hello@example.com">hello@example.com <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="contact-side"><div class="side-circle">READ<br>GROW<br>REPEAT</div><p>Every visit starts a new chapter.</p></div>
+      <div class="slide-count"><span>03</span> / 03</div>
     </section>
   </main>
-
-  <footer class="footer">
-    <p>&copy; 2026 Library Management System</p>
-  </footer>
+  <footer class="footer"><span>LEAF &amp; LORE LIBRARY</span><div class="slide-controls"><button id="previous" aria-label="Previous slide" disabled>←</button><span id="slide-label">HOME</span><button id="next" aria-label="Next slide">→</button></div><span>MADE FOR READERS</span></footer>
 </body>
 </html>
